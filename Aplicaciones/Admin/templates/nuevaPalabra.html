@@ -1,0 +1,62 @@
+{% extends "./plantilla.html" %}
+{% block body %}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <form action="{% url 'guardarPalabra' %}" enctype="multipart/form-data" id="frm_nueva_palabra" method="post"> <br>
+                {% csrf_token %}
+                <label for="quechua"><b>Quechua:</b></label>
+                <input type="text" name="quechua" class="form-control" id="quechua" placeholder="Ingrese la palabra en Quechua"> <br>
+                
+                <label for="espanol"><b>Español:</b></label>
+                <input type="text" name="espanol" class="form-control" id="espanol" placeholder="Ingrese la palabra en Español"> <br>
+                
+                <label for="descripcion"><b>Descripción:</b></label>
+                <textarea name="descripcion" class="form-control" id="descripcion" placeholder="Ingrese la descripción"></textarea>
+                <br>
+
+                <button type="submit" class="btn btn-primary"> Guardar</button>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="{% url 'listadoPalabras'%}">Cancelar</a>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    $("#frm_nueva_palabra").validate({
+        rules:{
+            quechua:{
+                required: true,
+                minlength: 3,
+                maxlength: 50
+            },
+            espanol:{
+                required: true,
+                minlength: 3,
+                maxlength: 50
+            },
+            descripcion:{
+                required: true
+            }
+        },
+        messages:{
+            quechua:{
+                required: "Por favor ingrese la palabra en Quechua",
+                minlength: "La palabra en Quechua debe tener al menos 3 caracteres",
+                maxlength: "La palabra en Quechua no puede exceder los 50 caracteres"
+            },
+            espanol:{
+                required: "Por favor ingrese la palabra en Español",
+                minlength: "La palabra en Español debe tener al menos 3 caracteres",
+                maxlength: "La palabra en Español no puede exceder los 50 caracteres"
+            },
+            descripcion:{
+                required: "La descripción es obligatoria"
+            }
+        }
+    });
+</script>
+
+{% endblock %}

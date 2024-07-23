@@ -1,0 +1,33 @@
+{% extends "./plantilla.html" %}
+{% block body %}
+<h1>EDITAR PALABRA</h1>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <form action="{% url 'procesarActualizarPalabra' %}" method="post"> <!-- Update the action URL -->
+                {% csrf_token %}
+                <input type="hidden" name="id" value="{{ palabraEditar.id }}">
+                
+                <label for="quechua"><b>Quechua:</b></label>
+                <input type="text" name="quechua" class="form-control" id="quechua"
+                       value="{{ palabraEditar.quechua }}"
+                       placeholder="Ingrese la palabra en Quechua" required>
+                
+                <label for="espanol"><b>Español:</b></label>
+                <input type="text" name="espanol" class="form-control" id="espanol"
+                       value="{{ palabraEditar.espanol }}"
+                       placeholder="Ingrese la palabra en Español" required>
+                
+                <label for="descripcion"><b>Descripción:</b></label>
+                <textarea name="descripcion" id="descripcion" class="form-control" rows="3"
+                          placeholder="Ingrese la descripción" required>{{ palabraEditar.descripcion }}</textarea>
+                <br>
+                <button type="submit" class="btn btn-warning">Actualizar</button>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="{% url 'listadoPalabras' %}" class="btn btn-secondary">Cancelar</a> <!-- Update the URL for 'Cancelar' button -->
+            </form>
+        </div>
+    </div>
+</div>
+<br>
+{% endblock %}
