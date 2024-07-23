@@ -37,12 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-<<<<<<< HEAD
-    'Aplicaciones.Prueba'
-
-=======
-    'Aplicaciones.Admin'
->>>>>>> f761eb7 (Importacion y vista de administrador)
+    
+    'Aplicaciones.Admin',
 ]
 
 MIDDLEWARE = [
