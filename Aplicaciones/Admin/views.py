@@ -1,9 +1,11 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from .models import Palabra
+from django.urls import reverse
 
-def home (request):
-    return render(request,'home.html')
+def home(request):
+    url = reverse('ListadoPalabras')
+    return render(request, 'home.html', {'listado_palabras_url': url})
 
 # Listado de palabras
 def listadoPalabras(request):
