@@ -1,9 +1,83 @@
 {% extends './plantilla.html' %}
+
 {% load static %}
 {% block body %}
 
-<h1>Prueba </h1>
-<h6> Aqui tiene que ir todas las actividades para mostrar al usuario</h6>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprende a hablar Quichua</title>
+    <link href="{% static 'plantilla/solmusic-master/css/style.css' %}" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #87CEEB; /* Color de fondo azul */
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+        .header, .section, .footer {
+            border: 2px solid black;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .header {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .section img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            float: left;
+            margin-right: 20px;
+        }
+        .section p {
+            text-align: justify;
+        }
+        .section:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        strong {
+            color: #fcfcfc; /* Cambia a cualquier color que desees */
+        }
+        p{
+            color: #fcfcfc; /* Cambia a cualquier color que desees */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            Aprende a hablar Quichua
+        </div>
+        <div class="section">
+            <img src="{% static 'plantilla/solmusic-master/img/icon1.jpg' %}" alt="Imagen 1">
+            <p>
+                Ecuador es hogar de diversas culturas indígenas, y el Quichua es una de las lenguas indígenas más habladas en el país, preservar y rescatar el Quichua contribuye a la diversidad cultural y lingüística.
+            </p>
+        </div>
+        <div class="section">
+            <img src="{% static 'plantilla/solmusic-master/img/icon2.jpg' %}" alt="Imagen 2">
+            <p>
+                <strong>MISIÓN</strong><br>
+                Nuestra Misión como institución perteneciente al sector de la Educación para el Trabajo y Desarrollo Humano es ofrecer el servicio de la enseñanza personalizada de alta calidad del idioma inglés como segunda lengua a niños.
+            </p>
+            <p>
+                <strong>VISIÓN</strong><br>
+                Nuestra visión es posicionarnos como institución líder en la enseñanza personalizada del idioma Quichua a nivel local, regional, departamental y nacional.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
+
 
 
 {% endblock %}
