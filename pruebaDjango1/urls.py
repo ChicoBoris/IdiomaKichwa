@@ -21,6 +21,5 @@ from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('Aplicaciones.Actividades.urls')),
-
+    path('', include('Aplicaciones.Usuario.urls')),  # Incluir URLs de la aplicación 'Usuario'
 ]

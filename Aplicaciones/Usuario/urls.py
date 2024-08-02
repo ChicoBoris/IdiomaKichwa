@@ -1,10 +1,9 @@
+# Aplicaciones/Usuario/urls.py
 from django.urls import path
-
-from pruebaDjango1 import settings
-from .views import home
+from .views import home, actividades  # Asegúrate de importar todas las vistas necesarias
 
 urlpatterns = [
-    path('', home, name='home'),
+    path('', home, name='home'),  # Ruta para la página principal
+    path('home/', home, name='home'),
+    path('actividades/', actividades, name='actividades'),
 ]
-if settings.DEBUG:
-    urlpatterns += settings.STATIC_URL(settings.STATIC_URL, document_root=settings.STATICFILES_DIRS)

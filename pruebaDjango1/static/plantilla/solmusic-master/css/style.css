@@ -17,7 +17,7 @@ body {
 	height: 100%;
 	font-family: "Montserrat", sans-serif;
 	-webkit-font-smoothing: antialiased;
-	font-smoothing: antialiased;
+	font-smooth: antialiased;
 }
 
 h1,
@@ -223,7 +223,7 @@ Header section
 .header-section {
 	padding-left: 55px;
 	padding-right: 72px;
-	background: #08192d;
+	background: linear-gradient(to right, #418ca5, #8cb356);
 }
 
 .site-logo {
@@ -266,7 +266,10 @@ Header section
 
 .main-menu {
 	list-style: none;
-	float: right;
+	display: flex;
+	justify-content: flex-start; /* Alinea el menú a la izquierda */
+	margin: 0;
+	padding: 0;
 }
 
 .main-menu li {
@@ -300,7 +303,7 @@ Header section
 	position: absolute;
 	list-style: none;
 	width: 220px;
-	left: 60px;
+	left: 10px; /* Asegúrate de que los submenús también estén alineados a la izquierda */
 	top: 100%;
 	padding: 20px 0;
 	visibility: hidden;
@@ -328,6 +331,7 @@ Header section
 .main-menu .sub-menu li a:hover {
 	color: #fc0254;
 }
+
 
 .slicknav_menu {
 	display: none;
@@ -596,7 +600,7 @@ Responsive
  -------------------*/
 
 .footer-section {
-	background: #0a183d;
+	background: linear-gradient(to right, #418ca5, #8cb356);
 	padding: 100px 0 85px;
 }
 
@@ -1812,4 +1816,5 @@ Responsive
 		position: relative;
 		margin-top: 20px;
 	}
+	
 }
