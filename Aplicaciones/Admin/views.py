@@ -1,11 +1,10 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 from .models import Palabra
 from django.urls import reverse
 
 def home(request):
-    url = reverse('ListadoPalabras')
-    return render(request, 'home.html', {'listado_palabras_url': url})
+    return render(request, "home.html")
 
 # Listado de palabras
 def listadoPalabras(request):
