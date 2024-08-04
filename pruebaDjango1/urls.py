@@ -20,6 +20,9 @@ from django.urls import path,include
 from django.conf import settings
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include('Aplicaciones.Usuario.urls')),  # Incluir URLs de la aplicación 'Usuario'
+    path('admi/', admin.site.urls),
+    path('', include('Aplicaciones.Usuario.urls')), 
+    path('accounts/', include('django.contrib.auth.urls')),
+    path('admin/', include('Aplicaciones.Admin.urls')), 
+    path('actividades/', include('Aplicaciones.Actividades.urls')),  
 ]
