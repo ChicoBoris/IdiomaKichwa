@@ -1,4 +1,5 @@
 {% extends './plantilla.html' %}
+
 {% load static %}
 {% block body %}
 <!DOCTYPE html>
@@ -9,7 +10,7 @@
     <div style="text-align: center;">
         <h1>Actividades</h1>
     </div>
-    <link rel="stylesheet" href="styles.css">
+    <link href="{% static 'plantilla/solmusic-master/css/style.css' %}" rel="stylesheet">
 </head>
 <style>
     body {
@@ -23,14 +24,13 @@
         display:flex;
         gap: 60px;
         padding: 60px;
-        margin-left: 150px;
-        
+        justify-content: center;
     }
     .item {
         text-align: center;
         border: 1px solid #ddd;
         padding: 20px;
-        border-radius: 10px;
+        border-radius: 30px;
         background: white;
         box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         display: flex;
@@ -44,23 +44,48 @@
         height: auto;
         cursor: pointer;
     }
-    .item p {
-        margin-top: 10px;
-        font-size: 1.2em;
-        color: black;
+    .item-link {
+        display: inline-block; /* Para que el contenido se ajuste al tamaño de la imagen */
+        text-align: center; /* Centra el contenido dentro del enlace */
+        text-decoration: none; /* Elimina el subrayado del enlace */
     }
+    
+    .item-image {
+        display: block; /* Asegura que la imagen sea un bloque */
+        margin: 0 auto; /* Centra la imagen horizontalmente */
+    }
+    
+    .item-button {
+        display: block; /* Hace que el botón sea un bloque y esté debajo de la imagen */
+        margin-top: 10px; /* Espacio entre la imagen y el botón */
+        width: 100%; /* Ajusta el ancho del botón al del contenedor (opcional) */
+    }
+    
     .small-image {
         width: 150px; /* Ajusta este valor según el tamaño deseado */
         height: auto;
+    }
+    .button {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 5px;
     }
     
 </style>
 <body>
     <div class="container1">
         <div class="item">
-            <a href="#aprender">
-                <img src="{% static 'plantilla/solmusic-master/img/aprender.png' %}" alt="Aprender">
-                <p>Aprender</p>
+            <a href="{% url 'aprender' %}" class="item-link">
+                <img src="{% static 'plantilla/solmusic-master/img/aprender.png' %}" alt="Aprender" class="item-image">
+                <button class="btn btn-primary item-button">Aprender</button>
             </a>
         </div>
         <div class="item">
@@ -70,15 +95,9 @@
             </a>
         </div>
         <div class="item">
-            <a href="#desafios">
-                <img src="{% static 'plantilla/solmusic-master/img/desafios.png' %}" alt="Desafios">
-                <p>Desafíos</p>
-            </a>
-        </div>
-        <div class="item">
-            <a href="#ayuda">
-                <img src="{% static 'plantilla/solmusic-master/img/help.png' %}" alt="Ayuda">
-                <p>Ayuda</p>
+            <a href="#palabras">
+                <img src="{% static 'plantilla/solmusic-master/img/palabras.png' %}" alt="Palabras">
+                <p>Palabras</p>
             </a>
         </div>
     </div>

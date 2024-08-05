@@ -16,3 +16,6 @@ def exit(request):
 @login_required
 def actividades(request):
     return render(request, 'actividades.html')
+
+def aprender(request):
+    return render(request, 'aprender.html')
