@@ -25,7 +25,7 @@
             padding: 10px;
             background-color: #2e2e2e;
             margin: 0 auto;
-            width: 300px;
+            width: 600px;
         }
 
         .progress-bar {
@@ -146,7 +146,7 @@
             <div class="progress-bar-fill" id="progress-bar-fill"></div>
         </div>
         <div class="lives">
-            <img src="{% static 'path/to/heart-icon.png' %}" alt="Heart">
+            <img src="{% static 'plantilla/solmusic-master/img/icons/heart-icon.png' %}" alt="Heart">
             <span id="lives-count">5</span>
         </div>
     </div>
@@ -172,7 +172,7 @@
             <button class="btn" id="next" onclick="nextQuestion()">Siguiente</button>
             <button class="btn" id="skip" onclick="skipQuestion()">Saltar</button>
         </div>
-        <div class="results">
+        <div class="results" style="display: none;">
             <h1>Resultados</h1>
             <div id="results-summary"></div>
             <button class="btn" onclick="retry()">Volver a Intentar</button>
@@ -181,17 +181,19 @@
     </div>
 
     <script>
+
         const questions = [
+        
             { question: '¿Cuál de estos niños está golpeando?', correct: 0, options: ['golpear.jpg', 'ula.png', 'cantar.png'], words: ['Takana', 'Pukllana', 'Kawana'] },
-            { question: '¿Cuál de estos es "gato"?', correct: 1, options: ['dog.png', 'cat.png', 'bird.png'], words: ['perro', 'gato', 'pájaro'] },
-            { question: '¿Cuál de estos es "manzana"?', correct: 2, options: ['banana.png', 'orange.png', 'apple.png'], words: ['plátano', 'naranja', 'manzana'] },
-            { question: '¿Cuál de estos es "coche"?', correct: 1, options: ['bike.png', 'car.png', 'bus.png'], words: ['bicicleta', 'coche', 'autobús'] },
-            { question: '¿Cuál de estos es "libro"?', correct: 0, options: ['book.png', 'pen.png', 'notebook.png'], words: ['libro', 'pluma', 'cuaderno'] },
-            { question: '¿Cuál de estos es "agua"?', correct: 2, options: ['juice.png', 'soda.png', 'water.png'], words: ['jugo', 'refresco', 'agua'] },
-            { question: '¿Cuál de estos es "lápiz"?', correct: 0, options: ['pencil.png', 'crayon.png', 'marker.png'], words: ['lápiz', 'crayón', 'marcador'] },
-            { question: '¿Cuál de estos es "sol"?', correct: 2, options: ['moon.png', 'star.png', 'sun.png'], words: ['luna', 'estrella', 'sol'] },
-            { question: '¿Cuál de estos es "árbol"?', correct: 1, options: ['flower.png', 'tree.png', 'bush.png'], words: ['flor', 'árbol', 'arbusto'] },
-            { question: '¿Cuál de estos es "mar"?', correct: 0, options: ['sea.png', 'river.png', 'lake.png'], words: ['mar', 'río', 'lago'] },
+            { question: '¿Cuál de niño es regañado?', correct: 1, options: ['cantar.png', 'regañar.png', 'medir.png'], words: ['Kawana', 'Takurina', 'Tupuna'] },
+            { question: '¿Cuál niño esta preguntando?', correct: 2, options: ['alegre.png', 'beber.png', 'preguntar.png'], words: ['Kusisqa', 'Upiyana', 'Tapuna'] },
+            { question: '¿Cuál niño esta sembrando?', correct: 1, options: ['enojado.png', 'sembrar.png', 'pintar.png'], words: ['Piñaklla', 'Tarpuna', 'Tullpuna'] },
+            { question: '¿Cuál niño se cayo?', correct: 0, options: ['caer.png', 'beber.png', 'bailar.png'], words: ['Urmana', 'Upiyana', 'Tushuna'] },
+            { question: '¿Cuál niño esta enfermo?', correct: 2, options: ['regañar.png', 'golpear.jpg', 'enfermar.png'], words: ['Tukurina', 'Takana', 'Unkuna'] },
+            { question: '¿Cuál niño esta llorando?', correct: 0, options: ['llorar.png', 'preguntar.png', 'regañar.png'], words: ['Wakana', 'Tapuna', 'Takurina'] },
+            { question: '¿Cuál niño esta alegre?', correct: 2, options: ['beber.png', 'medir.png', 'alegre.png'], words: ['Upiyana', 'Tupuna', 'Kusispa'] },
+            { question: '¿Cuál niño esta pintando?', correct: 1, options: ['saludar.png', 'pintar.png', 'enojado.png'], words: ['Napaycuy', 'Tullpuna', 'Piñaklla'] },
+            { question: '¿Cuál niño esta bailando?', correct: 0, options: ['bailar.png', 'reventar.png', 'sembrar.png'], words: ['Tushuna', 'Tuqyay', 'Tarpuna'] },
         ];
 
         let currentQuestion = 0;
@@ -289,7 +291,7 @@
         }
 
         function endAttempt() {
-            window.location.href = 'actividades.html'; // Cambia la URL según sea necesario
+            window.location.href = "{% url 'actividades' %}"; // Cambia la URL según sea necesario
         }
 
         window.onload = () => {

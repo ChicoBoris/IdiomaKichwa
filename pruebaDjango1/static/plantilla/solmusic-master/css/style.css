@@ -280,7 +280,7 @@ Header section
 .main-menu li a {
 	display: block;
 	font-size: 16px;
-	color: #ffffff;
+	color: #ca0f0f;
 	padding: 44px 10px;
 	margin-left: 60px;
 }
@@ -610,7 +610,7 @@ Responsive
 
 .footer-widget h2 {
 	font-size: 16px;
-	color: #fff;
+	color: #1c1b1b;
 	text-transform: uppercase;
 	margin-bottom: 30px;
 }
@@ -621,7 +621,7 @@ Responsive
 
 .footer-widget ul li a {
 	display: inline-block;
-	color: #6a7080;
+	color: #111112;
 	font-size: 14px;
 	margin-bottom: 10px;
 }
@@ -630,13 +630,13 @@ Responsive
 	font-size: 11px;
 	text-transform: uppercase;
 	font-weight: 500;
-	color: #505565;
+	color: #0c0d0d;
 	padding: 10px 0 25px;
 }
 
 .social-links a {
 	display: inline-block;
-	color: #6a7080;
+	color: #0b0b0b;
 	font-size: 18px;
 	margin-right: 35px;
 }
