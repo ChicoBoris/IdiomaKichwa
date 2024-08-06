@@ -16,7 +16,7 @@
     body {
         font-family: Arial, sans-serif;
         background: linear-gradient(to right, #418ca5, #8cb356);
-        background-size: cover; 
+        background-size: cover;
 
 
     }
@@ -49,18 +49,18 @@
         text-align: center; /* Centra el contenido dentro del enlace */
         text-decoration: none; /* Elimina el subrayado del enlace */
     }
-    
+
     .item-image {
         display: block; /* Asegura que la imagen sea un bloque */
         margin: 0 auto; /* Centra la imagen horizontalmente */
     }
-    
+
     .item-button {
         display: block; /* Hace que el botón sea un bloque y esté debajo de la imagen */
         margin-top: 10px; /* Espacio entre la imagen y el botón */
         width: 100%; /* Ajusta el ancho del botón al del contenedor (opcional) */
     }
-    
+
     .small-image {
         width: 150px; /* Ajusta este valor según el tamaño deseado */
         height: auto;
@@ -78,7 +78,7 @@
         cursor: pointer;
         border-radius: 5px;
     }
-    
+
 </style>
 <body>
     <div class="container1">
@@ -94,13 +94,14 @@
                 <img src="{% static 'plantilla/solmusic-master/img/sonidos.png' %}" alt="Sonidos">
                 <p>Sonidos</p>
                 <button class="btn btn-primary item-button">Aprender</button>
-                
+
             </a>
         </div>
         <div class="item">
-            <a href="#palabras">
+            <a href="{% url 'palabra' %}">
                 <img src="{% static 'plantilla/solmusic-master/img/palabras.png' %}" alt="Palabras">
                 <p>Palabras</p>
+                <button class="btn btn-primary item-button">Aprender</button>
             </a>
         </div>
     </div>
