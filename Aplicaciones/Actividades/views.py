@@ -6,7 +6,7 @@ from django.contrib.auth import logout
 
 def home (request):
     return render(request,'home.html')
-    
+
 def exit(request):
     logout(request)
     return redirect('actividades')
@@ -22,3 +22,6 @@ def aprender(request):
 
 def sonido(request):
     return render(request, 'sonido.html')
+
+def palabra(request):
+    return render(request, 'palabra.html')

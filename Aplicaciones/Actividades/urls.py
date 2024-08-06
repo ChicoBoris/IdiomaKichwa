@@ -7,5 +7,6 @@ urlpatterns = [
     path('actividades/aprender/', views.aprender, name='aprender'),
     path('aprender/', views.aprender, name='aprender'),
     path('sonido/', views.sonido, name='sonido'),
+    path('palabra/', views.palabra, name='palabra'),
     path('logout/', exit, name='exit'),
 ]
