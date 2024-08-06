@@ -19,3 +19,6 @@ def actividades(request):
 
 def aprender(request):
     return render(request, 'aprender.html')
+
+def sonido(request):
+    return render(request, 'sonido.html')

@@ -1,0 +1,194 @@
+{% extends './plantilla.html' %}
+
+{% load static %}
+{% block body %}
+
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #418ca5, #8cb356);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container2 {
+            text-align: center;
+            background: rgb(178, 227, 224);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin: 20px auto;
+            width: 80%;
+        }
+
+
+     
+
+    </style>
+    <div class="container2">
+        <table class="table">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Imagen</th>
+                <th scope="col">Español</th>
+                <th scope="col">Inglés</th>
+                <th scope="col">Kichwa</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><img src="{% static 'plantilla/solmusic-master/img/imgSonido/1.png' %}" alt="" height="100px"></td>
+                <td style="vertical-align: middle;">Golpear</td>
+                <td style="vertical-align: middle;">Hit</td>
+                <td style="vertical-align: middle;">Takana</td>
+              </tr>
+              <tr>
+                <td><img src="{% static 'plantilla/solmusic-master/img/imgSonido/2.png' %}" alt="" height="100px"></td>
+                <td style="vertical-align: middle;">Tocar</td>
+                <td style="vertical-align: middle;">Touch</td>
+                <td style="vertical-align: middle;">Takina</td>
+              </tr>
+              <tr>
+                <td><img src="{% static 'plantilla/solmusic-master/img/imgSonido/3.png' %}" alt="" height="100px"></td>
+                <td style="vertical-align: middle;">Regañar</td>
+                <td style="vertical-align: middle;">To rebuke</td>
+                <td style="vertical-align: middle;">Takurina</td>
+              </tr>
+              <tr>
+                <td><img src="{% static 'plantilla/solmusic-master/img/imgSonido/4.png' %}" alt="" height="100px"></td>
+                <td style="vertical-align: middle;">Preguntar</td>
+                <td style="vertical-align: middle;">To ask</td>
+                <td style="vertical-align: middle;">Tapuna</td>
+              </tr>
+              <tr>
+                <td><img src="{% static 'plantilla/solmusic-master/img/imgSonido/5.png' %}" alt="" height="100px"></td>
+                <td style="vertical-align: middle;">Sembrar</td>
+                <td style="vertical-align: middle;">To sow</td>
+                <td style="vertical-align: middle;">Tarpuna</td>
+              </tr>
+              <tr>
+                <td><img src="{% static 'plantilla/solmusic-master/img/imgSonido/6.png' %}" alt="" height="100px"></td>
+                <td style="vertical-align: middle;">Volver</td>
+                <td style="vertical-align: middle;">Turn</td>
+                <td style="vertical-align: middle;">Tikrana</td>
+              </tr>
+              <tr>
+                <td><img src="{% static 'plantilla/solmusic-master/img/imgSonido/7.png' %}" alt="" height="100px"></td>
+                <td style="vertical-align: middle;">Unir</td>
+                <td style="vertical-align: middle;">Connection</td>
+                <td style="vertical-align: middle;">Tinkina</td>
+              </tr>
+              <tr>
+                <td><img src="{% static 'plantilla/solmusic-master/img/imgSonido/8.png' %}" alt="" height="100px"></td>
+                <td style="vertical-align: middle;">Pintar</td>
+                <td style="vertical-align: middle;">Color</td>
+                <td style="vertical-align: middle;">Tullpuna</td>
+              </tr>
+              <tr>
+                <td><img src="{% static 'plantilla/solmusic-master/img/imgSonido/9.png' %}" alt="" height="100px"></td>
+                <td style="vertical-align: middle;">Medir</td>
+                <td style="vertical-align: middle;">Measure</td>
+                <td style="vertical-align: middle;">Tupuna</td>
+              </tr>
+              <tr>
+                <td><img src="{% static 'plantilla/solmusic-master/img/imgSonido/10.png' %}" alt="" height="100px"></td>
+                <td style="vertical-align: middle;">Terminar</td>
+                <td style="vertical-align: middle;">Finish</td>
+                <td style="vertical-align: middle;">Tukuchina</td>
+              </tr>
+              <tr>
+                <td><img src="{% static 'plantilla/solmusic-master/img/imgSonido/11.png' %}" alt="" height="100px"></td>
+                <td style="vertical-align: middle;">Reventar</td>
+                <td style="vertical-align: middle;">Burst</td>
+                <td style="vertical-align: middle;">Tukyana</td>
+              </tr>
+              <tr>
+                <td><img src="{% static 'plantilla/solmusic-master/img/imgSonido/12.png' %}" alt="" height="100px"></td>
+                <td style="vertical-align: middle;">Bailar</td>
+                <td style="vertical-align: middle;">Dance</td>
+                <td style="vertical-align: middle;">Tushuna</td>
+              </tr>
+              <tr>
+                <td><img src="{% static 'plantilla/solmusic-master/img/imgSonido/13.png' %}" alt="" height="100px"></td>
+                <td style="vertical-align: middle;">Odiar</td>
+                <td style="vertical-align: middle;">Chicken-mother</td>
+                <td style="vertical-align: middle;">Tsik-nina</td>
+              </tr>
+              <tr>
+                <td><img src="{% static 'plantilla/solmusic-master/img/imgSonido/14.png' %}" alt="" height="100px"></td>
+                <td style="vertical-align: middle;">Engañar</td>
+                <td style="vertical-align: middle;">To deceive</td>
+                <td style="vertical-align: middle;">Umana</td>
+              </tr>
+              <tr>
+                <td><img src="{% static 'plantilla/solmusic-master/img/imgSonido/15.png' %}" alt="" height="100px"></td>
+                <td style="vertical-align: middle;">Enfermar</td>
+                <td style="vertical-align: middle;">To nurse</td>
+                <td style="vertical-align: middle;">Unkuna</td>
+              </tr>
+              <tr>
+                <td><img src="{% static 'plantilla/solmusic-master/img/imgSonido/16.png' %}" alt="" height="100px"></td>
+                <td style="vertical-align: middle;">Beber</td>
+                <td style="vertical-align: middle;">Drink</td>
+                <td style="vertical-align: middle;">Upiyana</td>
+              </tr>
+              <tr>
+                <td><img src="{% static 'plantilla/solmusic-master/img/imgSonido/17.png' %}" alt="" height="100px"></td>
+                <td style="vertical-align: middle;">Caer</td>
+                <td style="vertical-align: middle;">Fall</td>
+                <td style="vertical-align: middle;">Urmana</td>
+              </tr>
+              <tr>
+                <td><img src="{% static 'plantilla/solmusic-master/img/imgSonido/18.png' %}" alt="" height="100px"></td>
+                <td style="vertical-align: middle;">Oír</td>
+                <td style="vertical-align: middle;">Face</td>
+                <td style="vertical-align: middle;">Uyana</td>
+              </tr>
+              <tr>
+                <td><img src="{% static 'plantilla/solmusic-master/img/imgSonido/19.png' %}" alt="" height="100px"></td>
+                <td style="vertical-align: middle;">Bajar</td>
+                <td style="vertical-align: middle;">Works</td>
+                <td style="vertical-align: middle;">Uryakuna</td>
+              </tr>
+              <tr>
+                <td><img src="{% static 'plantilla/solmusic-master/img/imgSonido/20.png' %}" alt="" height="100px"></td>
+                <td style="vertical-align: middle;">Poder</td>
+                <td style="vertical-align: middle;">Power</td>
+                <td style="vertical-align: middle;">Ushana</td>
+              </tr>
+              <tr>
+                <td><img src="{% static 'plantilla/solmusic-master/img/imgSonido/21.png' %}" alt="" height="100px"></td>
+                <td style="vertical-align: middle;">Hacer hueco</td>
+                <td style="vertical-align: middle;">To make hollow</td>
+                <td style="vertical-align: middle;">Utukuna</td>
+              </tr>
+              <tr>
+                <td><img src="{% static 'plantilla/solmusic-master/img/imgSonido/22.png' %}" alt="" height="100px"></td>
+                <td style="vertical-align: middle;">Nacer</td>
+                <td style="vertical-align: middle;">Birth</td>
+                <td style="vertical-align: middle;">Wachana</td>
+              </tr>
+              <tr>
+                <td><img src="{% static 'plantilla/solmusic-master/img/imgSonido/23.png' %}" alt="" height="100px"></td>
+                <td style="vertical-align: middle;">Llorar</td>
+                <td style="vertical-align: middle;">To cry</td>
+                <td style="vertical-align: middle;">Wakana</td>
+              </tr>
+              <tr>
+                <td><img src="{% static 'plantilla/solmusic-master/img/imgSonido/24.png' %}" alt="" height="100px"></td>
+                <td style="vertical-align: middle;">Crecer</td>
+                <td style="vertical-align: middle;">Grow</td>
+                <td style="vertical-align: middle;">Wiñana</td>
+              </tr>
+              <tr>
+                <td><img src="{% static 'plantilla/solmusic-master/img/imgSonido/25.png' %}" alt="" height="100px"></td>
+                <td style="vertical-align: middle;">Morir</td>
+                <td style="vertical-align: middle;">Death</td>
+                <td style="vertical-align: middle;">Wañuna</td>
+              </tr>
+            </tbody>
+          </table>
+         
+    </div>
+{% endblock %}
